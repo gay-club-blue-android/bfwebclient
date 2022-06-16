@@ -1,10 +1,10 @@
 <template>
-  <div>hello world</div>
+  <h2>oops resource not found</h2>
 </template>
 
 <script>
 export default {
-  name: "CompinentOne"
+  name: "ComponentNotFound"
 }
 </script>
 
