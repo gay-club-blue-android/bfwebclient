@@ -1,5 +1,12 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import router from './config-router'
+import globalVariables from './global-variables'
 
-createApp(App).use(router).mount('#app')
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
+
+createApp(App)
+    .provide("globalVariables", globalVariables)
+    .use(router)
+    .mount('#app')

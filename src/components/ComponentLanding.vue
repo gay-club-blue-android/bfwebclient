@@ -26,6 +26,7 @@
                   <li class="nav-item"><a href="#how_it_works">как это работает</a></li>
                   <li class="nav-item"><a href="#start_fermer_carrier">Стать фермером</a></li>
                   <li class="nav-item"><a href="#FAQ">ЧАВО</a></li>
+                  <li class="nav-item"><router-link to="/auth">Авторизация</router-link></li>
                 </ul>
               </div>
               <div class="button">
