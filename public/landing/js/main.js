@@ -4,7 +4,6 @@ Author: GrayGrids
 */
 
 
-
 (function () {
     //===== Prealoder
 
@@ -14,6 +13,7 @@ Author: GrayGrids
             carousel(carousels[i]);
         }
     });
+
     function carousel(root) {
         var figure = root.querySelector("figure"),
             nav = root.querySelector("nav"),
@@ -28,6 +28,7 @@ Author: GrayGrids
             setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
         });
         setupNavigation();
+
         function setupCarousel(n, s) {
             var apothem = s / (2 * Math.tan(Math.PI / n));
             figure.style.transformOrigin = `50% 50% ${-apothem}px`;
@@ -40,8 +41,10 @@ Author: GrayGrids
                 for (i = 0; i < n; i++) images[i].style.backfaceVisibility = "hidden";
             rotateCarousel(currImage);
         }
+
         function setupNavigation() {
             nav.addEventListener("click", onClick, true);
+
             function onClick(e) {
                 e.stopPropagation();
                 var t = e.target;
@@ -54,19 +57,20 @@ Author: GrayGrids
                 rotateCarousel(currImage);
             }
         }
+
         function rotateCarousel(imageIndex) {
             figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
         }
     }
 
-    // window.onload = function () {
-    //     window.setTimeout(fadeout, 500);
-    // }
+    window.onload = function () {
+        window.setTimeout(fadeout, 500);
+    }
 
-    // function fadeout() {
-    //     document.querySelector('.preloader').style.opacity = '0';
-    //     document.querySelector('.preloader').style.display = 'none';
-    // }
+    function fadeout() {
+        document.querySelector('.preloader').style.opacity = '0';
+        document.querySelector('.preloader').style.display = 'none';
+    }
 
     /*=====================================
     Sticky
@@ -80,7 +84,6 @@ Author: GrayGrids
         } else {
             header_navbar.classList.remove("sticky");
         }
-
 
 
         // show or hide the back-top-top button
@@ -117,20 +120,20 @@ Author: GrayGrids
     );
     navbarToggler.addEventListener('click', function () {
         navbarToggler.classList.toggle("active");
-    })
+    });
     // WOW active
-    new WOW().init();
-
-    let filterButtons = document.querySelectorAll('.portfolio-btn-wrapper button');
-    filterButtons.forEach(e =>
-        e.addEventListener('click', () => {
-
-            let filterValue = event.target.getAttribute('data-filter');
-            iso.arrange({
-                filter: filterValue
-            });
-        })
-    );
+    // new WOW().init();
+    //
+    // let filterButtons = document.querySelectorAll('.portfolio-btn-wrapper button');
+    // filterButtons.forEach(e =>
+    //     e.addEventListener('click', () => {
+    //
+    //         let filterValue = event.target.getAttribute('data-filter');
+    //         iso.arrange({
+    //             filter: filterValue
+    //         });
+    //     })
+    // );
 
     var elements = document.getElementsByClassName("portfolio-btn");
     for (var i = 0; i < elements.length; i++) {
@@ -144,15 +147,15 @@ Author: GrayGrids
             }
             this.classList.add("active");
         };
-    };
+    }
 
-    //====== counter up 
-    var cu = new counterUp({
-        start: 0,
-        duration: 2000,
-        intvalues: true,
-        interval: 100,
-        append: " ",
-    });
-    cu.start();
+    // //====== counter up
+    // var cu = new counterUp({
+    //     start: 0,
+    //     duration: 2000,
+    //     intvalues: true,
+    //     interval: 100,
+    //     append: " ",
+    // });
+    // cu.start();
 })();

@@ -1,7 +1,12 @@
 <template>
   <main class="form-signin">
     <form>
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <h1 class="h3 mb-3 fw-normal">Please sign in
+      </h1>
+
+      <div>
+        <bootstrap-icon icon="alarm-fill" />
+      </div>
 
       <div class="form-floating">
         <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" v-model="login">
