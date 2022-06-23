@@ -1,15 +1,5 @@
 <template>
   <div id="landing">
-
-<!--    <div class="preloader">-->
-<!--      <div class="preloader-inner">-->
-<!--        <div class="preloader-icon">-->
-<!--          <span></span>-->
-<!--          <span></span>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
     <header class="header">
       <div class="navbar-area">
         <div class="container">
