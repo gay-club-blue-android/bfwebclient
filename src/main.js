@@ -25,6 +25,8 @@ defineRule("input-text-rule", value => {
     }
 });
 
+globalVariables.init();
+
 createApp(App)
     .provide("globalVariables", globalVariables)
     .use(router)

@@ -35,20 +35,27 @@ export default {
   inject: ["globalVariables"],
   data() {
     return {
-      innerGlobalVariables: this.globalVariables,
+      innerStorage: this.globalVariables,
+      storageKeys: this.globalVariables.keys,
       email: "",
       password: ""
     }
   },
   mounted() {
-    if (this.innerGlobalVariables.isAuthorized === false) {
+    let isAuthorized = this.innerStorage.getValueByKey(this.storageKeys.isAuthorized);
+
+    console.log(isAuthorized);
+
+    if (isAuthorized === false) {
+
+      console.log("1111");
 
       let deviceId = new objDeviceUUID.DeviceUUID().get();
 
-      fetch("http://localhost:8090/mobile/apps/authByLoginAndPassword", {
+      fetch("http://localhost:8040/mobile/apps/authByLoginAndPassword", {
         method: "post",
         headers: {
-          "Content-type": "application/json"
+          "Content-type": "application/json",
         },
         body: JSON.stringify({
           login: "web",
@@ -58,11 +65,9 @@ export default {
       }).then(response => response.json()).then(responseAsObject => {
         console.dir("success auth");
 
-        this.innerGlobalVariables.httpHeaders.API_KEY = responseAsObject.apiKey;
-        this.innerGlobalVariables.httpHeaders.DEVICE_ID = deviceId;
-        this.innerGlobalVariables.isAuthorized = true;
-
-        console.dir(this.innerGlobalVariables.httpHeaders);
+        this.innerStorage.setKeyValuePair(this.storageKeys.ApiKey, responseAsObject.apiKey);
+        this.innerStorage.setKeyValuePair(this.storageKeys.DeviceId, responseAsObject.deviceId);
+        this.innerStorage.setKeyValuePair(this.storageKeys.isAuthorized, true);
 
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
@@ -71,12 +76,12 @@ export default {
   },
   methods: {
     authFarmer() {
-      fetch("http://localhost:8090/web/farmers/authByEmailAndPassword", {
+      fetch("http://localhost:8040/web/farmers/authByEmailAndPassword", {
         method: "post",
         headers: {
           "Content-type": "application/json",
-          "API_KEY": this.innerGlobalVariables.httpHeaders.API_KEY,
-          "DEVICE_ID": this.innerGlobalVariables.httpHeaders.DEVICE_ID
+          "API_KEY": this.innerStorage.getValueByKey(this.storageKeys.ApiKey),
+          "DEVICE_ID": this.innerStorage.getValueByKey(this.storageKeys.DeviceId)
         },
         body: JSON.stringify({
           email: this.email,
@@ -84,8 +89,11 @@ export default {
         })
       }).then(response => response.json()).then(responseAsObject => {
         console.dir("success auth");
-
         console.dir(responseAsObject);
+
+        this.innerStorage.setKeyValuePair(this.storageKeys.farmer, responseAsObject);
+
+        window.location.href = "/profile";
 
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
