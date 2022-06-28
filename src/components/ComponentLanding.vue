@@ -126,7 +126,7 @@
           <div class="col-lg-6 col-12">
             <div class="about-left">
               <div class="section-title align-left">
-                <h2 class="wow fadeInUp tgc" data-wow-delay=".4s">Как это работает?</h2>
+                <h2 class=" fadeInUp tgc" data-wow-delay=".4s">Как это работает?</h2>
               </div>
               <div class="about-tab wow fadeInUp" data-wow-delay=".4s">
 
@@ -177,7 +177,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-12">
-            <div class="about-right wow fadeInRight" data-wow-delay=".4s">
+            <div class="about-right  fadeInRight" data-wow-delay=".4s">
               <img src="../../public/landing/images/about/baba.jpg" alt="#">
             </div>
           </div>
@@ -191,8 +191,8 @@
         <div class="row">
           <div class="col-12">
             <div class="section-title white-text">
-              <h2 class="wow fadeInUp" data-wow-delay=".4s">Хочешь стать фермером?</h2>
-              <p class="wow fadeInUp" data-wow-delay=".6s">Здесь ты можешь узнать, как за пару минут стать одним из
+              <h2 class="fadeInUp" data-wow-delay=".4s">Хочешь стать фермером?</h2>
+              <p class=" fadeInUp" data-wow-delay=".6s">Здесь ты можешь узнать, как за пару минут стать одним из
                 нашей
                 команды фермеров.</p>
             </div>
@@ -229,7 +229,7 @@
         <section>
           <div class="row">
             <div class="section-title align-left">
-              <h2 class="wow fadeInUp tgc" data-wow-delay=".4s">Часто задаваемые вопросы</h2>
+              <h2 class="fadeInUp tgc" data-wow-delay=".4s">Часто задаваемые вопросы</h2>
             </div>
             <div class=" col-12  ">
               <div class="accordion " id="accordionExample">
@@ -258,7 +258,7 @@
                       </button>
                     </h5>
                   </div>
-                  <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo"
+                  <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo"
                   >
                     <div class="card-body">
                       Потому что мы командой из 7 человек старались делать этот проект(а еще, ток спизди сайт сука, я ж
@@ -276,7 +276,7 @@
                       </button>
                     </h5>
                   </div>
-                  <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree">
+                  <div id="collapseThree" class="collapse " aria-labelledby="headingThree">
                     <div class="card-body">
                       Записываете номер телефона, вам ghb[jlbn rjl rjl ds tuj dgbcsdftnt d dscdtntdijtcz jryj b djn b
                       dct
@@ -296,8 +296,7 @@
                       </button>
                     </h5>
                   </div>
-                  <div id="collapseFour" class="collapse fade" aria-labelledby="headingFour"
-                       data-parent="#accordionExample">
+                  <div id="collapseFour" class="collapse " aria-labelledby="headingFour">
                     <div class="card-body">
                       Хз
                     </div>
