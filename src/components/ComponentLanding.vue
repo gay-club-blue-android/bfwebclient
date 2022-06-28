@@ -9,15 +9,14 @@
                 <a class="navbar-brand logo" href="index.html">
                   <img class="logo1" src="../../public/landing/images/logo/Logo.svg" alt="Logo"/>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button"
                         aria-expanded="false" aria-label="Toggle navigation">
                   <span class="toggler-icon"></span>
                   <span class="toggler-icon"></span>
                   <span class="toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul id="nav" class="navbar-nav ml-auto">
                     <li class="nav-item">
                       <a class="active" href="#what_is_it">Брянский Фермер</a></li>
@@ -48,16 +47,14 @@
       <div class="hero-inner">
         <div class="container">
           <div class="row ">
-            <div class="col-lg-6 co-12">
-              <div class="home-slider">
-                <div class="hero-text">
-                  <h1 class="wow fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
-                  <p class="wow fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
-                    вас лучшие условия для купли и продажи.
-                    <br></p>
-                  <div class="button1">
-                    <a href="contact.html" class="btn">Скачать</a>
-                  </div>
+            <div class="col-lg-6">
+              <div class="hero-text">
+                <h1 class="fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
+                <p class="fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
+                  вас лучшие условия для купли и продажи.
+                  <br></p>
+                <div class="button1">
+                  <a href="contact.html" class="btn">Скачать</a>
                 </div>
               </div>
             </div>
@@ -72,17 +69,17 @@
         <div class="row">
           <div class="col-12">
             <div class="section-title align-left">
-              <h2 class="wow fadeInUp tgc" data-wow-delay=".4s">Преимущества</h2>
-              <p class="wow fadeInUp tgc" data-wow-delay=".6s">Здесь мы вам расскажем наши преимущества и потенциал.</p>
+              <h2 class="fadeInUp tgc" data-wow-delay=".4s">Преимущества</h2>
+              <p class="fadeInUp tgc" data-wow-delay=".6s">Здесь мы вам расскажем наши преимущества и потенциал.</p>
             </div>
           </div>
         </div>
         <div class="single-head">
-          <img class="service-patern wow fadeInLeft" data-wow-delay=".5s"
+          <img class="service-patern fadeInLeft" data-wow-delay=".5s"
                src="../../public/landing/images/service/service-patern.png" alt="#">
           <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
-              <div class="single-service wow fadeInUp tgc" data-wow-delay=".2s">
+              <div class="single-service fadeInUp tgc" data-wow-delay=".2s">
                 <h3 class="tgc"><a href="service-single.html">Лучшие фермеры</a></h3>
                 <div class="icon">
                   <i class="lni lni-microscope"></i>
@@ -91,7 +88,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-              <div class="single-service wow fadeInUp tgc" data-wow-delay=".4s">
+              <div class="single-service fadeInUp tgc" data-wow-delay=".4s">
                 <h3><a href="service-single.html">Качественная продукция</a></h3>
                 <div class="icon">
                   <i class="lni lni-blackboard"></i>
@@ -100,7 +97,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-              <div class="single-service wow fadeInUp tgc" data-wow-delay=".6s">
+              <div class="single-service fadeInUp tgc" data-wow-delay=".6s">
                 <h3><a href="service-single.html">Быстрая тех поддержка</a></h3>
                 <div class="icon">
                   <i class="lni lni-ux"></i>
@@ -109,7 +106,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-              <div class="single-service wow fadeInUp tgc" data-wow-delay=".8s">
+              <div class="single-service fadeInUp tgc" data-wow-delay=".8s">
                 <h3><a href="service-single.html">Удобный и интуетивно понятный интерфейс</a></h3>
                 <div class="icon">
                   <i class="lni lni-graph"></i>
@@ -144,7 +141,7 @@
 
                 <div class="tab-content" id="myTabContent">
 
-                  <div class="tab-pane fade show active" id="t-tab1" role="tabpanel">
+                  <div class="tab-pane fade active" id="t-tab1" role="tabpanel">
                     <div class="tab-content">
                       <ul>
                         <li><i class="lni lni-checkmark-circle"></i> Скачиваешь приложение</li>
@@ -216,8 +213,8 @@
 
                 </figure>
                 <nav>
-                  <button class="nav prev">Назад</button>
-                  <button class="nav next">Вперед</button>
+                  <button class="nav">Назад</button>
+                  <button class="nav">Вперед</button>
                 </nav>
               </div>
             </div>
@@ -227,7 +224,7 @@
     </section>
 
     <!--ЧАВО-->
-    <div id="FAQ" class="container-fluid bg-gray">
+    <div id="FAQ" class="container-fluid ">
       <div class="container">
         <section>
           <div class="row">
@@ -246,8 +243,7 @@
                     </h5>
                   </div>
 
-                  <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne"
-                       data-parent="#accordionExample">
+                  <div id="collapseOne" class="collapse fade" aria-labelledby="headingOne">
                     <div class="card-body">
                       Можно картой ,налом ,аналом ,криптоволютой
                     </div>
@@ -263,7 +259,7 @@
                     </h5>
                   </div>
                   <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo"
-                       data-parent="#accordionExample">
+                  >
                     <div class="card-body">
                       Потому что мы командой из 7 человек старались делать этот проект(а еще, ток спизди сайт сука, я ж
                       тебя знаю, ЛЕНИВЫЙ РАЗРАБ JAVASCRIPT, ИДИ РУЧКАМИ ВЕРСТКУ ПИШИ)
@@ -280,8 +276,7 @@
                       </button>
                     </h5>
                   </div>
-                  <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree"
-                       data-parent="#accordionExample">
+                  <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree">
                     <div class="card-body">
                       Записываете номер телефона, вам ghb[jlbn rjl rjl ds tuj dgbcsdftnt d dscdtntdijtcz jryj b djn b
                       dct
@@ -321,7 +316,7 @@
           <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
               <!-- Single Widget -->
-              <div class="f-about single-footer">
+              <div class=" single-footer">
                 <div class="logo">
                   <a href="index.html">ddd</a>
                 </div>
@@ -338,7 +333,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
               <!-- Single Widget -->
-              <div class="single-footer f-link">
+              <div class="single-footer">
                 <h3>Ну если вы это смотрите</h3>
                 <ul>
                   <li><a href="#">В душе не ебу что здесь написать</a></li>
@@ -350,7 +345,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
               <!-- Single Widget -->
-              <div class="single-footer f-link">
+              <div class="single-footer ">
                 <h3>Еще что-то</h3>
                 <ul>
                   <li><a href="#">Topics</a></li>
@@ -363,7 +358,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
               <!-- Single Widget -->
-              <div class="single-footer f-link">
+              <div class="single-footer">
                 <h3>Поддержка</h3>
                 <ul>
                   <li><a href="#">Cookies</a></li>
@@ -379,21 +374,21 @@
       </div>
       <!--/ End Footer Middle -->
       <!-- Start Footer Bottom -->
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="inner">
-            <div class="row">
-              <div class="col-12">
-                <div class="left">
-                  <p>BY GodOfCat,Qvijae,Astagor,_HADES_,Zandegok,Rayman,didjei(от didjei(не пиздите пожалуйста в голову
-                    ничего не приходит))<a href="https://graygrids.com/" rel="nofollow"
-                                           target="_blank">GayClubBlueAndroid</a></p>
-                </div>
+
+      <div class="container">
+        <div class="inner">
+          <div class="row">
+            <div class="col-12">
+              <div class="left">
+                <p>BY GodOfCat,Qvijae,Astagor,_HADES_,Zandegok,Rayman,didjei(от didjei(не пиздите пожалуйста в голову
+                  ничего не приходит))<a href="https://graygrids.com/" rel="nofollow"
+                                         target="_blank">GayClubBlueAndroid</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- End Footer Middle -->
     </footer>
     <!--/ End Footer Area -->
