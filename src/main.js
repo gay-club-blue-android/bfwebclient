@@ -27,8 +27,9 @@ defineRule("input-text-rule", value => {
 
 globalVariables.init();
 
+console.log("main js");
+
 createApp(App)
-    .provide("globalVariables", globalVariables)
     .use(router)
     .component('BootstrapIcon', BootstrapIcon)
     .mount('#app')

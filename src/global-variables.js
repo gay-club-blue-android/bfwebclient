@@ -1,5 +1,4 @@
 export default {
-
     keys: {
         ApiKey: "API_KEY",
         DeviceId: "DEVICE_ID",
@@ -8,17 +7,24 @@ export default {
     },
 
     getValueByKey: function (key) {
-        return window.localStorage.getItem(key);
+        return JSON.parse(sessionStorage.getItem(key));
     },
 
     setKeyValuePair: function (key, value) {
-        window.localStorage.setItem(key, value);
+        sessionStorage.setItem(key, JSON.stringify(value));
     },
 
     init: function () {
-        this.setKeyValuePair(this.keys.ApiKey, null);
-        this.setKeyValuePair(this.keys.DeviceId, null);
-        this.setKeyValuePair(this.keys.isAuthorized, false);
-        this.setKeyValuePair(this.keys.farmer, null);
+        if (sessionStorage.getItem("init1") === null) {
+            //console.log("init call");
+            sessionStorage.setItem("init1", "yes");
+
+            this.setKeyValuePair(this.keys.ApiKey, null);
+            this.setKeyValuePair(this.keys.DeviceId, null);
+            this.setKeyValuePair(this.keys.isAuthorized, false);
+            this.setKeyValuePair(this.keys.farmer, null);
+        } else {
+            //console.log("already init");
+        }
     }
 }
