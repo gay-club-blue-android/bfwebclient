@@ -1,7 +1,7 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import router from './config-router'
-import globalVariables from './global-variables'
+import globalVariables from './inner-storage'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import innerStorage from "/src/global-variables"
+import innerStorage from "/src/inner-storage"
 
 export default {
   name: "ComponentProfile",

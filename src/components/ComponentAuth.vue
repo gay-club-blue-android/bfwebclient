@@ -26,7 +26,9 @@ import {Form, Field} from 'vee-validate';
 
 import objDeviceUUID from "/node_modules/device-uuid/lib/device-uuid.js"
 
-import innerStorage from "/src/global-variables"
+import innerStorage from "/src/inner-storage"
+
+import router from '/src/config-router'
 
 export default {
   name: "ComponentAuth",
@@ -94,7 +96,9 @@ export default {
         console.dir("success auth");
         console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
 
-        window.location.href = "/profile";
+        //window.location.href = "/profile";
+
+        router.push("/profile");
 
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
