@@ -42,9 +42,7 @@ export default {
     }
   },
   mounted() {
-    let isAuthorized = this.innerStorage.getValueByKey(this.storageKeys.isAuthorized);
-
-    console.log(isAuthorized);
+    let isAuthorized = this.innerStorage.getValueByKey(this.storageKeys.isAuthorized).bool;
 
     if (isAuthorized === false) {
 
