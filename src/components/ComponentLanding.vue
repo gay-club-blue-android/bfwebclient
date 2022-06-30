@@ -9,7 +9,7 @@
                 <a class="navbar-brand logo" href="index.html">
                   <img  src="../../public/landing/images/logo/Logo.svg" alt="Logo"/>
                 </a>
-                <button class="navbar-toggler" type="button"
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                   <span class="toggler-icon"></span>

@@ -3,6 +3,7 @@ import ComponentLanding from "./components/ComponentLanding";
 import ComponentNotFound from "./components/ComponentNotFound";
 import ComponentAuth from "./components/ComponentAuth";
 
+
 const routes = [
     {
         path: "/",
@@ -10,6 +11,10 @@ const routes = [
     },
     {
         path: "/auth",
+        component: ComponentAuth
+    },
+    {
+        path: "/profile",
         component: ComponentAuth
     },
     {
