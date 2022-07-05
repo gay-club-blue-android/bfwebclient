@@ -1,0 +1,17 @@
+.input-not-valid {
+    outline: none !important;
+    box-shadow: none !important;
+
+    border-style: solid !important;
+    border-width: 1px;
+    border-color: red !important;
+}
+
+.input-valid {
+    outline: none !important;
+    box-shadow: none !important;
+
+    border-style: solid !important;
+    border-width: 1px;
+    border-color: green !important;
+}

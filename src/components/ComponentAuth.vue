@@ -10,19 +10,19 @@
       </div>
 
       <div class="container overflow-hidden">
-          <div class="col text-center">
-            <div class="p-1 form-floating container">
-              <Field name="email" rules="input-text-rule" :class="errors.email" class="form-control"
-                     id="floatingInput" v-model="email"/>
-              <label for="floatingInput">Email address</label>
-            </div>
-              <div class="p-1 form-floating container">
-                <Field name="password" rules="input-text-rule" :class="errors.password" class="form-control"
-                       id="floatingPassword" v-model="password"/>
-                <label for="floatingPassword">Password</label>
-            </div>
+        <div class="col text-center">
+          <div class="p-1 form-floating container">
+            <Field name="email" rules="input-email-rule" :class="errors.email" class="form-control"
+                   id="inputEmail" v-model="email"/>
+            <label for="inputEmail">Email address</label>
+          </div>
+          <div class="p-1 form-floating container">
+            <Field name="password" rules="input-text-rule:1,64" :class="errors.password" class="form-control"
+                   id="inputPassword" v-model="password"/>
+            <label for="inputPassword">Password</label>
           </div>
         </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col text-center">
@@ -101,7 +101,7 @@ export default {
         },
         body: JSON.stringify({
           email: this.email,
-          password: this.password,
+          password: this.password.trim(),
         })
       }).then(response => response.json()).then(responseAsObject => {
 
@@ -123,21 +123,8 @@ export default {
 </script>
 
 <style scoped>
-.input-not-valid {
-  outline: none !important;
-  box-shadow: none !important;
 
-  border-style: solid !important;
-  border-width: 1px;
-  border-color: red !important;
-}
-
-.input-valid {
-  outline: none !important;
-  box-shadow: none !important;
-
-  border-style: solid !important;
-  border-width: 1px;
-  border-color: green !important;
+.btn-primary {
+  background-color: #0d462c !important;
 }
 </style>

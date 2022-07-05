@@ -3,7 +3,7 @@ import ComponentLanding from "./components/ComponentLanding";
 import ComponentNotFound from "./components/ComponentNotFound";
 import ComponentAuth from "./components/ComponentAuth";
 import ComponentProfile from "./components/ComponentProfile";
-// import globalVariables from './global-variables'
+import innerStorage from "/src/inner-storage"
 
 const routes = [
     {
@@ -30,15 +30,17 @@ const router = createRouter({
 });
 
 
+router.beforeEach((to, from) => {
+    console.log(from);
+    console.log(to);
+    console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
 
-// router.beforeEach((to, from) => {
-//     console.log(from);
-//
-//     if (to.fullPath.includes("profile")) {
-//         if (globalVariables.farmer === null) {
-//             return "/auth";
-//         }
-//     }
-// })
+
+    if (to.path.startsWith("/profile")) {
+        if (innerStorage.getValueByKey(innerStorage.keys.farmer) === null) {
+            return '/auth';
+        }
+    }
+})
 
 export default router;
