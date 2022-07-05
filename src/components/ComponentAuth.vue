@@ -41,29 +41,25 @@ import {Form, Field} from 'vee-validate';
 
 import objDeviceUUID from "/node_modules/device-uuid/lib/device-uuid.js"
 
+import innerStorage from "/src/inner-storage"
+
+import router from '/src/config-router'
+
 export default {
   name: "ComponentAuth",
   components: {
     Form,
     Field,
   },
-  inject: ["globalVariables"],
   data() {
     return {
-      innerStorage: this.globalVariables,
-      storageKeys: this.globalVariables.keys,
       email: "",
       password: ""
     }
   },
   mounted() {
-    let isAuthorized = this.innerStorage.getValueByKey(this.storageKeys.isAuthorized);
 
-    console.log(isAuthorized);
-
-    if (isAuthorized === false) {
-
-      console.log("1111");
+    if (innerStorage.getValueByKey(innerStorage.keys.isAuthorized) === false) {
 
       let deviceId = new objDeviceUUID.DeviceUUID().get();
 
@@ -78,11 +74,16 @@ export default {
           deviceId: deviceId
         })
       }).then(response => response.json()).then(responseAsObject => {
-        console.dir("success auth");
 
-        this.innerStorage.setKeyValuePair(this.storageKeys.ApiKey, responseAsObject.apiKey);
-        this.innerStorage.setKeyValuePair(this.storageKeys.DeviceId, responseAsObject.deviceId);
-        this.innerStorage.setKeyValuePair(this.storageKeys.isAuthorized, true);
+
+        innerStorage.setKeyValuePair(innerStorage.keys.ApiKey, responseAsObject.apiKey);
+        innerStorage.setKeyValuePair(innerStorage.keys.DeviceId, deviceId);
+        innerStorage.setKeyValuePair(innerStorage.keys.isAuthorized, true);
+
+        console.dir("success auth");
+        console.dir(innerStorage.getValueByKey(innerStorage.keys.ApiKey));
+        console.dir(innerStorage.getValueByKey(innerStorage.keys.DeviceId));
+        console.dir(innerStorage.getValueByKey(innerStorage.keys.isAuthorized));
 
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
@@ -95,20 +96,23 @@ export default {
         method: "post",
         headers: {
           "Content-type": "application/json",
-          "API_KEY": this.innerStorage.getValueByKey(this.storageKeys.ApiKey),
-          "DEVICE_ID": this.innerStorage.getValueByKey(this.storageKeys.DeviceId)
+          "API_KEY": innerStorage.getValueByKey(innerStorage.keys.ApiKey),
+          "DEVICE_ID": innerStorage.getValueByKey(innerStorage.keys.DeviceId)
         },
         body: JSON.stringify({
           email: this.email,
           password: this.password,
         })
       }).then(response => response.json()).then(responseAsObject => {
+
+        innerStorage.setKeyValuePair(innerStorage.keys.farmer, responseAsObject);
+
         console.dir("success auth");
-        console.dir(responseAsObject);
+        console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
 
-        this.innerStorage.setKeyValuePair(this.storageKeys.farmer, responseAsObject);
+        //window.location.href = "/profile";
 
-        window.location.href = "/profile";
+        router.push("/profile");
 
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);

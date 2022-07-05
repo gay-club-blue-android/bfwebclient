@@ -49,22 +49,21 @@
         </div>
       </div>
   </div>
-
 </template>
 
 <script>
+import innerStorage from "/src/inner-storage"
+
 export default {
   name: "ComponentProfile",
-  inject: ["globalVariables"],
   data() {
     return {
-      innerStorage: this.globalVariables,
-      storageKeys: this.globalVariables.keys,
-      farmer: this.innerStorage.getValueByKey(this.storageKeys.farmer)
+      farmer: innerStorage.getValueByKey(innerStorage.keys.farmer)
     }
   },
   mounted() {
-    console.dir(this.innerGlobalVariables);
+    console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
+    console.dir(typeof innerStorage.getValueByKey(innerStorage.keys.farmer));
   }
 }
 </script>
