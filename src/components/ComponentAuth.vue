@@ -1,21 +1,36 @@
 <template>
   <main class="form-signin">
     <Form v-slot="{errors}">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-      <div class="form-floating">
-        <Field name="email" rules="input-text-rule" :class="errors.email" class="form-control" id="floatingInput"
-               v-model="email"/>
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <Field name="password" rules="input-text-rule" :class="errors.password" class="form-control"
-               id="floatingPassword" v-model="password"/>
-        <label for="floatingPassword">Password</label>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+          </div>
+        </div>
       </div>
 
+      <div class="container overflow-hidden">
+          <div class="col text-center">
+            <div class="p-1 form-floating container">
+              <Field name="email" rules="input-text-rule" :class="errors.email" class="form-control"
+                     id="floatingInput" v-model="email"/>
+              <label for="floatingInput">Email address</label>
+            </div>
+              <div class="p-1 form-floating container">
+                <Field name="password" rules="input-text-rule" :class="errors.password" class="form-control"
+                       id="floatingPassword" v-model="password"/>
+                <label for="floatingPassword">Password</label>
+            </div>
+          </div>
+        </div>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <button class="btn btn-primary" @click="authFarmer">Зарегистрироваться</button>
+          </div>
+        </div>
+      </div>
 
-      <button class="w-100 btn btn-lg btn-primary" @click="authFarmer">Sign in</button>
     </Form>
   </main>
 
