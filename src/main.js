@@ -24,6 +24,27 @@ defineRule("input-text-rule", value => {
         return "input-valid";
     }
 });
+defineRule('trimLength', (value, [min, max]) => {
+    if (!value) return "input-not-valid";
+    value = value.trim()
+    if (value.length < min || value.length > max) {
+        return "input-not-valid";
+    }
+    return "input-valid";
+})
+defineRule('value', (value, [min, max]) => {
+    if (!value) return "input-not-valid";
+    if (!(isNaN(min) || isNaN(max) ||isNaN(value))) {
+        value = parseFloat(value);
+        min = parseFloat(min);
+        max = parseFloat(max);
+    }
+    console.log(value,typeof value)
+    if (value < min || value > max) {
+        return "input-not-valid";
+    }
+    return "input-valid";
+})
 
 globalVariables.init();
 
