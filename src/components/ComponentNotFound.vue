@@ -2,10 +2,10 @@
   <div class="filler">
     <div class="text-block">
       <div class="text">
-        <h2>Страница не найдена</h2>
+        <h2> Страница не найдена</h2>
       </div>
       <div class="back">
-        <h3 @click="goBack">Вернуться назад</h3>
+        <h3 @click="goBack"> Вернуться назад</h3>
       </div>
     </div>
   </div>
