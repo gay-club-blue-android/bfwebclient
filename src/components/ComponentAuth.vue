@@ -4,29 +4,29 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal text-size">Войти</h1>
           </div>
         </div>
       </div>
 
-      <div class="container overflow-hidden">
+      <div class="container">
         <div class="col text-center">
           <div class="p-1 form-floating container">
             <Field name="email" rules="input-email-rule" :class="errors.email" class="form-control"
                    id="inputEmail" v-model="email"/>
-            <label for="inputEmail">Email address</label>
+            <label for="inputEmail">Email</label>
           </div>
-          <div class="p-1 form-floating container">
+          <div class="p-1 form-floating container mt-3">
             <Field name="password" rules="input-text-rule:1,64" :class="errors.password" class="form-control"
                    id="inputPassword" v-model="password"/>
-            <label for="inputPassword">Password</label>
+            <label for="inputPassword">Пароль</label>
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container mt-3">
         <div class="row">
           <div class="col text-center">
-            <button class="btn btn-primary" @click="authFarmer">Зарегистрироваться</button>
+            <button class="btn color white-text" @click="authFarmer">Войти</button>
           </div>
         </div>
       </div>
@@ -126,5 +126,17 @@ export default {
 
 .btn-primary {
   background-color: #0d462c !important;
+}
+
+
+.white-text{
+  color: white;
+}
+
+.color{
+  background: #0d462c;
+}
+.text-size{
+  font-size: 50px;
 }
 </style>
