@@ -4,29 +4,29 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal text-size">Войти</h1>
           </div>
         </div>
       </div>
 
-      <div class="container overflow-hidden">
+      <div class="container">
           <div class="col text-center">
             <div class="p-1 form-floating container">
               <Field name="email" rules="input-text-rule" :class="errors.email" class="form-control"
                      id="floatingInput" v-model="email"/>
-              <label for="floatingInput">Email address</label>
+              <label for="floatingInput">Почта</label>
             </div>
-              <div class="p-1 form-floating container">
+              <div class="p-1 form-floating container margin">
                 <Field name="password" rules="input-text-rule" :class="errors.password" class="form-control"
                        id="floatingPassword" v-model="password"/>
-                <label for="floatingPassword">Password</label>
+                <label for="floatingPassword">Пароль</label>
             </div>
           </div>
         </div>
-      <div class="container">
+      <div class="container margin">
         <div class="row">
           <div class="col text-center">
-            <button class="btn btn-primary" @click="authFarmer">Зарегистрироваться</button>
+            <button class="btn color" @click="authFarmer">Войти</button>
           </div>
         </div>
       </div>
@@ -127,7 +127,15 @@ export default {
   border-width: 1px;
   border-color: red !important;
 }
-
+.margin{
+  margin-top: 10px;
+}
+.color{
+  background: #0d462c;
+ }
+.text-size{
+  font-size: 50px;
+}
 .input-valid {
   outline: none !important;
   box-shadow: none !important;
