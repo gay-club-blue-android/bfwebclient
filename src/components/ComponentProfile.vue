@@ -21,6 +21,10 @@
       <div class="p-1 form-floating container">
         <h2>{{ farmer.description }}</h2>
       </div>
+
+      <div class="p-1 form-floating container">
+        <img id="image">
+      </div>
     </div>
   </div>
 
@@ -48,6 +52,8 @@
                  id="inputDescription" v-model="product.description"/>
           <label for="inputDescription">description</label>
         </div>
+
+
       </div>
 
       <div class="col text-center">
@@ -76,13 +82,52 @@ export default {
         name: "",
         price: 0,
         amount: 0,
-        description: ""
+        description: "",
+        photoPath: ""
       }
+    }
+  },
+  methods: {
+    loadFarmerPicture: function () {
+      fetch("http://localhost:8040/web/farmers/getPictureByName/" + this.farmer.photoPath, {
+        method: "get",
+        headers: {
+          "Content-type": "application/json",
+          "API_KEY": innerStorage.getValueByKey(innerStorage.keys.ApiKey),
+          "DEVICE_ID": innerStorage.getValueByKey(innerStorage.keys.DeviceId)
+        }
+      }).then(response => {
+        const reader = response.body.getReader();
+        return new ReadableStream({
+          start(controller) {
+            return pump();
+
+            function pump() {
+              return reader.read().then(({done, value}) => {
+                if (done) {
+                  controller.close();
+                  return;
+                }
+                controller.enqueue(value);
+                return pump();
+              });
+            }
+          }
+        })
+      })
+          .then(stream => new Response(stream))
+          .then(response => response.blob())
+          .then(blob => URL.createObjectURL(blob))
+          .then(url => document.getElementById("image").src = url)
+          .catch(error => {
+            console.log('Looks like there was a problem: \n', error);
+          });
     }
   },
   mounted() {
     console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
     console.dir(typeof innerStorage.getValueByKey(innerStorage.keys.farmer));
+    this.loadFarmerPicture();
   }
 }
 </script>
