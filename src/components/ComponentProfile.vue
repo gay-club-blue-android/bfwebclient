@@ -81,9 +81,14 @@ export default {
       product: {
         name: "",
         price: 0,
+        priceMeasurementId:3,
         amount: 0,
+        amountMeasurementId: 3,
         description: "",
-        photoPath: ""
+        rating: 4.5,
+        photoPath: "",
+        farmerId: innerStorage.getValueByKey(innerStorage.keys.farmer).id,
+        productCategoryId: 3
       }
     }
   },
@@ -122,6 +127,22 @@ export default {
           .catch(error => {
             console.log('Looks like there was a problem: \n', error);
           });
+    },
+
+    addProduct: function () {
+      fetch("http://localhost:8040/web/products/addNewProduct", {
+        method: "post",
+        headers: {
+          "Content-type": "application/json",
+          "API_KEY": innerStorage.getValueByKey(innerStorage.keys.ApiKey),
+          "DEVICE_ID": innerStorage.getValueByKey(innerStorage.keys.DeviceId)
+        },
+        body: JSON.stringify(this.product)
+      }).then(response => {
+        console.dir(response);
+      }).catch(error => {
+        console.log('Looks like there was a problem: \n', error);
+      });
     }
   },
   mounted() {
