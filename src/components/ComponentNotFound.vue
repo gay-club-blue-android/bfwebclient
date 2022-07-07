@@ -30,26 +30,21 @@ export default {
 .filler {
   width: 100%;
   height: 100vh;
-  background: #1A1919 url("/public/notFound/images/Background.svg") no-repeat fixed center center;
+  background: #1A1919 url("/public/notFound/images/Background.svg") no-repeat ;
   display: flex;
   justify-content: start;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .text-block{
-  text-align: right;
+  text-align: left;
 }
-
 .text {
   color: #ffffff;
 }
 
 .back {
-  color: #ffffff;
+  color: #C4C4C4;
   cursor: pointer;
-}
-
-.back:hover {
-  transform: scale(1.1);
 }
 
 </style>
