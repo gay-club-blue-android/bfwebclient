@@ -44,20 +44,22 @@
     <section id="what_is_it" class="hero-area">
       <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-12">
-              <div class="hero-text">
-                <h1 class="fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
-                <p class="fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
-                  вас лучшие условия для купли и продажи.
-                  <br></p>
-                <div class="button1">
-                  <a href="contact.html" class="btn">Скачать</a>
-                </div>
-                <div class="kartinka-ebanaya">
-                  <img src="../../public/landing/images/hero/her.jpg">
-                </div>
+          <div class="col-lg-12">
+            <div class="hero-text">
+              <div>
+                <img src="../../public/landing/images/hero/her.jpg" class="border">
               </div>
+              <h1 class="fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
+              <p class="fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
+                вас лучшие условия для купли и продажи.
+                <br></p>
+              <div class="button1">
+                <a href="contact.html" class="btn">Скачать</a>
+              </div>
+
             </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -462,9 +464,11 @@ export default {
   border-radius: 10px;
   background: #0d462c;
 }
-.kartinka-ebanaya{
-  float:left;
-  width: 500px;
-  height: 500px;
+
+.border {
+  border-radius: 20px;
+  float: right;
+  width: 50%;
+  height: 50%;
 }
 </style>
