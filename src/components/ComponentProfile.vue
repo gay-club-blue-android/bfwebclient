@@ -25,7 +25,7 @@
             <div class="p-1  form-floating container">
               <h4>Описание: {{ farmer.description }}</h4>
             </div>
-            <a href="#" class="mb-5 btn btn-primary">Изменить</a>
+            <a href="#" class="color mb-5 btn btn-primary">Изменить</a>
           </div>
         </div>
 
@@ -65,7 +65,7 @@
           </div>
 
           <div class="col text-center">
-            <button class="mb-5 btn btn-primary" @click="addProduct">Добавить продукт</button>
+            <button class="color mb-5 btn btn-primary" @click="addProduct">Добавить продукт</button>
           </div>
         </Form>
       </div>
@@ -84,7 +84,7 @@
             <div class="card-body">
               <h5 class="card-title">Товар 1</h5>
               <p class="card-text">Описание цена кол-во</p>
-              <a href="#" class="btn btn-primary">Удалить</a>
+              <a href="#" class="color btn btn-primary">Удалить</a>
             </div>
           </div>
           <div class="card" style="width: 19rem;">
@@ -92,7 +92,7 @@
             <div class="card-body">
               <h5 class="card-title">Товар 2</h5>
               <p class="card-text">Описание цена кол-во</p>
-              <a href="#" class="btn btn-primary">Удалить</a>
+              <a href="#" class="color btn btn-primary">Удалить</a>
             </div>
           </div>
           <div class="card" style="width: 19rem;">
@@ -100,7 +100,7 @@
             <div class="card-body">
               <h5 class="card-title">Товар 3</h5>
               <p class="card-text">Описание цена кол-во</p>
-              <a href="#" class="btn btn-primary">Удалить</a>
+              <a href="#" class="color btn btn-primary">Удалить</a>
             </div>
           </div>
           <div class="card" style="width: 19rem;">
@@ -108,7 +108,7 @@
             <div class="card-body">
               <h5 class="card-title">Товар 4</h5>
               <p class="card-text">Описание цена кол-во</p>
-              <a href="#" class="btn btn-primary">Удалить</a>
+              <a href="#" class="color btn btn-primary">Удалить</a>
             </div>
           </div>
           <div class="card" style="width: 19rem;">
@@ -116,19 +116,13 @@
             <div class="card-body">
               <h5 class="card-title">Товар 4</h5>
               <p class="card-text">Описание цена кол-во</p>
-              <a href="#" class="btn btn-primary">Удалить</a>
+              <a href="#" class="color btn btn-primary">Удалить</a>
             </div>
           </div>
         </div>
         </div>
     </div>
   </div>
-  <div class="row ">
-
-
-  </div>
-
-
 
 
 
@@ -226,5 +220,9 @@ export default {
 </script>
 
 <style scoped>
+
+.color{
+  background: #0d462c;
+}
 
 </style>
