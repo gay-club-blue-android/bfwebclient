@@ -7,7 +7,7 @@
             <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand logo" href="index.html">
-                  <img  src="../../public/landing/images/logo/Logo.svg" alt="Logo"/>
+                  <img src="../../public/landing/images/logo/Logo.svg" alt="Logo"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -32,9 +32,6 @@
                     </li>
                   </ul>
                 </div>
-                <div class="button">
-                  <a href="contact.html" class="btn">Скачать</a>
-                </div>
               </nav>
 
             </div>
@@ -45,10 +42,9 @@
 
     <!--что это-->
     <section id="what_is_it" class="hero-area">
-      <div class="hero-inner">
-        <div class="container">
-          <div class="row ">
-            <div class="col-lg-6">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
               <div class="hero-text">
                 <h1 class="fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
                 <p class="fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
@@ -57,9 +53,11 @@
                 <div class="button1">
                   <a href="contact.html" class="btn">Скачать</a>
                 </div>
+                <div class="kartinka-ebanaya">
+                  <img src="../../public/landing/images/hero/her.jpg">
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -399,6 +397,7 @@
     </a>
 
   </div>
+
 </template>
 
 <script>
@@ -456,3 +455,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.background {
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #0d462c;
+}
+.kartinka-ebanaya{
+  float:left;
+  width: 500px;
+  height: 500px;
+}
+</style>
