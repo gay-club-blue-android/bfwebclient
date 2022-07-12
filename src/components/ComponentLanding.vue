@@ -470,5 +470,8 @@ export default {
   float: right;
   width: 50%;
   height: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>
