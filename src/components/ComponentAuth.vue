@@ -1,14 +1,17 @@
 <template>
   <main class="form-signin">
     <Form v-slot="{errors}">
+
       <div class="container">
         <div class="row">
-          <div class="col text-center">
+          <div class="col text-center enterLogo">
+            <img :src="require('@/assets/Logo.svg')">
             <h1 class="h3 mb-3 fw-normal text-size">Войти</h1>
           </div>
         </div>
       </div>
 
+    <div class="filler">
       <div class="container">
         <div class="col text-center">
           <div class="p-1 form-floating container">
@@ -30,7 +33,7 @@
           </div>
         </div>
       </div>
-
+      </div>
     </Form>
   </main>
 
@@ -124,13 +127,21 @@ export default {
 
 <style scoped>
 
-.btn-primary {
-  background-color: #0d462c !important;
+.filler {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff url("/public/Auth/images/Background.svg") no-repeat ;
 }
 
 
+.enterLogo{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .white-text{
-  color: white;
+  color: white !important;
 }
 
 .color{
@@ -139,4 +150,5 @@ export default {
 .text-size{
   font-size: 50px;
 }
+
 </style>
