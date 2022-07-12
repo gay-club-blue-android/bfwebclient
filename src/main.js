@@ -2,6 +2,7 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import router from './config-router'
 import globalVariables from './inner-storage'
+import toaster from '@meforma/vue-toaster';
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
@@ -102,5 +103,6 @@ console.log("main js");
 
 createApp(App)
     .use(router)
+    .use(toaster)
     .component('BootstrapIcon', BootstrapIcon)
     .mount('#app')

@@ -59,7 +59,8 @@
                 <label for="inputAmount">amount</label>
               </div>
               <div class="p-1 form-floating container">
-                <Field name="description" rules="input-text-rule:1,4096" :class="errors.description" class="form-control"
+                <Field name="description" rules="input-text-rule:1,4096" :class="errors.description"
+                       class="form-control"
                        id="inputDescription" v-model="product.description"/>
                 <label for="inputDescription">description</label>
               </div>
@@ -74,19 +75,13 @@
     </div>
 
 
-
-
-
-
-
-
     <div class="container">
       <div class="row">
         <div class="col">
           <h3 class="col mb-4">Продукты:</h3>
           <div class="row">
             <div class="card" style="width: 19rem;">
-              <img class="card-img-top"  alt="Card image cap">
+              <img class="card-img-top" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Товар 1</h5>
                 <p class="card-text">Описание цена кол-во</p>
@@ -94,7 +89,7 @@
               </div>
             </div>
             <div class="card" style="width: 19rem;">
-              <img class="card-img-top"  alt="Card image cap">
+              <img class="card-img-top" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Товар 2</h5>
                 <p class="card-text">Описание цена кол-во</p>
@@ -102,7 +97,7 @@
               </div>
             </div>
             <div class="card" style="width: 19rem;">
-              <img class="card-img-top"  alt="Card image cap">
+              <img class="card-img-top" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Товар 3</h5>
                 <p class="card-text">Описание цена кол-во</p>
@@ -110,7 +105,7 @@
               </div>
             </div>
             <div class="card" style="width: 19rem;">
-              <img class="card-img-top"  alt="Card image cap">
+              <img class="card-img-top" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Товар 4</h5>
                 <p class="card-text">Описание цена кол-во</p>
@@ -118,7 +113,7 @@
               </div>
             </div>
             <div class="card" style="width: 19rem;">
-              <img class="card-img-top"  alt="Card image cap">
+              <img class="card-img-top" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Товар 4</h5>
                 <p class="card-text">Описание цена кол-во</p>
@@ -130,10 +125,6 @@
       </div>
     </div>
   </div>
-
-
-
-
 
 
 </template>
@@ -155,7 +146,7 @@ export default {
       product: {
         name: "",
         price: 0,
-        priceMeasurementId:3,
+        priceMeasurementId: 3,
         amount: 0,
         amountMeasurementId: 3,
         description: "",
@@ -212,8 +203,17 @@ export default {
           "DEVICE_ID": innerStorage.getValueByKey(innerStorage.keys.DeviceId)
         },
         body: JSON.stringify(this.product)
-      }).then(response => {
-        console.dir(response);
+      }).then(response => response.json()).then(responseAsObject => {
+        console.dir(responseAsObject);
+
+        this.product.name = "";
+        this.product.description = "";
+        this.product.price = 0;
+        this.product.amount = 0;
+
+        this.$toast.success(`Продукт успешно добавлен`);
+
+        setTimeout(this.$toast.clear,3000);
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
       });
@@ -229,18 +229,19 @@ export default {
 
 <style scoped>
 .huyna-ebanaya {
-  background: #FFFFFF url("/public/profile/Background.svg") no-repeat ;
+  background: #FFFFFF url("/public/profile/Background.svg") no-repeat;
 
 }
-.color{
+
+.color {
   background: #0d462c;
 }
 
-.white-text{
+.white-text {
   color: white !important;
 }
 
-.huy{
+.huy {
   display: flex;
 }
 
