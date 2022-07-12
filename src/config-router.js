@@ -37,10 +37,10 @@ router.beforeEach((to, from) => {
 
 
     if (to.path.startsWith("/profile")) {
-        if (innerStorage.getValueByKey(innerStorage.keys.farmer) === null) {
-            return '/auth';
-        }
-    }
+        //if (innerStorage.getValueByKey(innerStorage.keys.farmer) === null) {
+           // return '/auth';
+        //}
+   }
 })
 
 export default router;
