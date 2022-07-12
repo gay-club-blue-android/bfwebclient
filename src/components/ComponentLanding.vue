@@ -310,7 +310,7 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer text">
      В разработке
     </footer>
     <!--/ End Footer Area -->
@@ -395,5 +395,9 @@ export default {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.text{
+  font-size: 50px;
 }
 </style>
