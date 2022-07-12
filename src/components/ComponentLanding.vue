@@ -7,7 +7,7 @@
             <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand logo" href="index.html">
-                  <img  src="../../public/landing/images/logo/Logo.svg" alt="Logo"/>
+                  <img src="../../public/landing/images/logo/Logo.svg" alt="Logo"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -32,9 +32,6 @@
                     </li>
                   </ul>
                 </div>
-                <div class="button">
-                  <a href="contactd.html" class="btn">Скачать</a>
-                </div>
               </nav>
 
             </div>
@@ -45,20 +42,23 @@
 
     <!--что это-->
     <section id="what_is_it" class="hero-area">
-      <div class="hero-inner">
-        <div class="container">
-          <div class="row ">
-            <div class="col-lg-6">
-              <div class="hero-text">
-                <h1 class="fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
-                <p class="fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
-                  вас лучшие условия для купли и продажи.
-                  <br></p>
-                <div class="button1">
-                  <a href="contact.html" class="btn">Скачать</a>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="hero-text">
+              <div>
+                <img src="../../public/landing/images/hero/her.jpg" class="border">
               </div>
+              <h1 class="fadeInUp bgc " data-wow-delay=".3">Брянский фермер</h1>
+              <p class="fadeInUp bgc" data-wow-delay=".5s">Это лучший магазин для фермеров. <br> Мы сделали для
+                вас лучшие условия для купли и продажи.
+                <br></p>
+              <div class="button1">
+                <a href="contact.html" class="btn">Скачать</a>
+              </div>
+
             </div>
+
           </div>
         </div>
       </div>
@@ -310,86 +310,8 @@
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-middle">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class=" single-footer">
-                <div class="logo">
-                  <a href="index.html">ddd</a>
-                </div>
-                <p>Какая то информация на которую всем похуй.</p>
-                <div class="footer-social">
-                  <ul>
-                    <li><a href="#"><i class="lni lni-instagram"></i></a></li>
-                    <li><a href="#"><i class="lni lni-twitter"></i></a></li>
-                    <li><a href="#"><i class="lni lni-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer">
-                <h3>Ну если вы это смотрите</h3>
-                <ul>
-                  <li><a href="#">В душе не ебу что здесь написать</a></li>
-                  <li><a href="#">Наши сервисы</a></li>
-                  <li><a href="#">Связаться с нами (ну что вам ответят и так знаете)</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer ">
-                <h3>Еще что-то</h3>
-                <ul>
-                  <li><a href="#">Topics</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">License</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer">
-                <h3>Поддержка</h3>
-                <ul>
-                  <li><a href="#">Cookies</a></li>
-                  <li><a href="#">Forum</a></li>
-                  <li><a href="#">Support Team</a></li>
-                  <li><a href="#">Sitemap</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ End Footer Middle -->
-      <!-- Start Footer Bottom -->
-
-      <div class="container">
-        <div class="inner">
-          <div class="row">
-            <div class="col-12">
-              <div class="left">
-                <p>BY GodOfCat,Qvijae,Astagor,_HADES_,Zandegok,Rayman,didjei(от didjei(не пиздите пожалуйста в голову
-                  ничего не приходит))<a href="https://graygrids.com/" rel="nofollow"
-                                         target="_blank">GayClubBlueAndroid</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- End Footer Middle -->
+    <footer class="footer text">
+     В разработке
     </footer>
     <!--/ End Footer Area -->
 
@@ -399,6 +321,7 @@
     </a>
 
   </div>
+
 </template>
 
 
@@ -457,3 +380,25 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.background {
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #0d462c;
+}
+
+.border {
+  border-radius: 20px;
+  float: right;
+  width: 50%;
+  height: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text{
+  font-size: 50px;
+}
+</style>

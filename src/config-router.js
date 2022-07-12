@@ -5,6 +5,7 @@ import ComponentAuth from "./components/ComponentAuth";
 import ComponentProfile from "./components/ComponentProfile";
 import innerStorage from "/src/inner-storage"
 
+
 const routes = [
     {
         path: "/",
