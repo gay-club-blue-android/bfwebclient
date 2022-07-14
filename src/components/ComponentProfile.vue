@@ -153,31 +153,6 @@ export default {
             console.log('Looks like there was a problem: \n', error);
           });
     },
-
-    addProduct: function () {
-      fetch("http://localhost:8040/web/products/addNewProduct", {
-        method: "post",
-        headers: {
-          "Content-type": "application/json",
-          "API_KEY": innerStorage.getValueByKey(innerStorage.keys.ApiKey),
-          "DEVICE_ID": innerStorage.getValueByKey(innerStorage.keys.DeviceId)
-        },
-        body: JSON.stringify(this.product)
-      }).then(response => response.json()).then(responseAsObject => {
-        console.dir(responseAsObject);
-
-        this.product.name = "";
-        this.product.description = "";
-        this.product.price = 0;
-        this.product.amount = 0;
-
-        this.$toast.success(`Продукт успешно добавлен`);
-
-        setTimeout(this.$toast.clear,3000);
-      }).catch(error => {
-        console.log('Looks like there was a problem: \n', error);
-      });
-    }
   },
   mounted() {
     console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
