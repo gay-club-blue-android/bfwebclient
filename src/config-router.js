@@ -3,6 +3,7 @@ import ComponentLanding from "./components/ComponentLanding";
 import ComponentNotFound from "./components/ComponentNotFound";
 import ComponentAuth from "./components/ComponentAuth";
 import ComponentProfile from "./components/ComponentProfile";
+import ComponentNewProduct from "./components/ComponentNewProduct";
 import innerStorage from "/src/inner-storage"
 
 
@@ -18,6 +19,10 @@ const routes = [
     {
         path: "/profile",
         component: ComponentProfile
+    },
+    {
+        path: "/newproduct",
+        component: ComponentNewProduct
     },
     {
         path: "/:catchAll(.*)",

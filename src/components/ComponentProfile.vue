@@ -28,48 +28,8 @@
               <h4>Описание: {{ farmer.description }}</h4>
             </div>
             <a href="#" class="color mb-5 btn white-text">Изменить</a>
+            <router-linl class="color mb-5 btn white-text" to="/newproduct"><btn>Добавить продукт</btn><router-link>
           </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h3 class="col mb-3 text-center">Добавление продукта</h3>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <Form v-slot="{errors}">
-            <div class="col text-center">
-              <div class="p-1 form-floating container">
-                <Field name="name" rules="input-text-rule:1,128" :class="errors.name" class="form-control"
-                       id="inputName" v-model="product.name"/>
-                <label for="inputName">name</label>
-              </div>
-              <div class="p-1 form-floating container">
-                <Field name="price" rules="input-int-number-rule:1,100000" :class="errors.price" class="form-control"
-                       id="inputPrice" v-model="product.price"/>
-                <label for="inputPrice">price</label>
-              </div>
-              <div class="p-1 form-floating container">
-                <Field name="amount" rules="input-int-number-rule:1,1000" :class="errors.amount" class="form-control"
-                       id="inputAmount" v-model="product.amount"/>
-                <label for="inputAmount">amount</label>
-              </div>
-              <div class="p-1 form-floating container">
-                <Field name="description" rules="input-text-rule:1,4096" :class="errors.description"
-                       class="form-control"
-                       id="inputDescription" v-model="product.description"/>
-                <label for="inputDescription">description</label>
-              </div>
-            </div>
-
-            <div class="col text-center">
-              <button class="color mb-5 btn white-text" @click="addProduct">Добавить продукт</button>
-            </div>
-          </Form>
         </div>
       </div>
     </div>
@@ -130,15 +90,15 @@
 </template>
 
 <script>
-import {Form, Field} from 'vee-validate';
+//import {Form, Field} from 'vee-validate';
 
 import innerStorage from "/src/inner-storage"
 
 export default {
   name: "ComponentProfile",
   components: {
-    Form,
-    Field,
+    //Form,
+    //Field,
   },
   data() {
     return {
