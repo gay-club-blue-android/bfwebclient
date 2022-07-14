@@ -42,7 +42,7 @@
 
     <!--что это-->
     <section id="what_is_it" class="hero-area">
-      <div class="container">
+      <div class="container  margin-top">
         <div class="row">
           <div class="col-lg-12">
             <div class="hero-text">
@@ -54,7 +54,7 @@
                 вас лучшие условия для купли и продажи.
                 <br></p>
               <div class="button1">
-                <a href="contact.html" class="btn">Скачать</a>
+                <a href="contact.html" class="btn background">Скачать</a>
               </div>
 
             </div>
@@ -214,8 +214,7 @@
 
                 </figure>
                 <nav>
-                  <button class="nav">Назад</button>
-                  <button class="nav">Вперед</button>
+                  <button class="nav">Крути</button>
                 </nav>
               </div>
             </div>
@@ -238,7 +237,7 @@
                   <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
                       <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              data-target="#collapseOne" aria-controls="collapseOne" style="color: #1A1919">
                         <i class="fa fa-amazon main"></i><i class="fa fa-angle-double-right mr-3"></i>Как оплачивать.
                       </button>
                     </h5>
@@ -254,14 +253,14 @@
                   <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse"
-                              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              data-target="#collapseTwo" aria-controls="collapseTwo" style="color: #1A1919">
                         <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>Почему мы.
                       </button>
                     </h5>
                   </div>
                   <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo"
                   >
-                    <div class="card-body">
+                    <div class="card-body" style="color: #1A1919">
                       Потому что мы командой из 7 человек старались делать этот проект(а еще, ток спизди сайт сука, я ж
                       тебя знаю, ЛЕНИВЫЙ РАЗРАБ JAVASCRIPT, ИДИ РУЧКАМИ ВЕРСТКУ ПИШИ)
                     </div>
@@ -271,14 +270,16 @@
                   <div class="card-header" id="headingThree">
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse"
-                              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3"></i>Как сделать
+                              data-target="#collapseThree" aria-controls="collapseThree" style="color: #1A1919">
+                        <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3 text-color" style="color: #1A1919">Как
+                        сделать
                         чтоб не вздомали(Что-то с двух этапной аундификацией(аудификацией(а да похуй))).
+                      </i>
                       </button>
                     </h5>
                   </div>
                   <div id="collapseThree" class="collapse " aria-labelledby="headingThree">
-                    <div class="card-body">
+                    <div class="card-body"  style="color: #1A1919">
                       Записываете номер телефона, вам ghb[jlbn rjl rjl ds tuj dgbcsdftnt d dscdtntdijtcz jryj b djn b
                       dct
                       rjulf rnj-nj gjgsnftncz djqnb yf frrfeyn ,tp dfituj dtljvf dfv ghbltn edtljvktybt(ну да,ну да
@@ -291,9 +292,9 @@
                   <div class="card-header" id="headingFour">
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse"
-                              data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"></i>Как с нами
-                        связатся.
+                              data-target="#collapseFour" aria-controls="collapseFour" style="color: #1A1919">
+                        <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"  style="color: #1A1919">Как с нами
+                        связатся.</i>
                       </button>
                     </h5>
                   </div>
@@ -310,8 +311,64 @@
       </div>
     </div>
 
-    <footer class="footer text">
-     В разработке
+    <footer class="footer">
+      <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+              <!-- Single Widget -->
+              <div class=" single-footer">
+                <div class="logo">
+                  <img src="../../public/landing/images/logo/Logo.svg">
+                  <p style="color: #1A1919">Брянский фермер</p>
+                </div>
+                <div class="footer-social">
+                  <ul>
+                    <li><a href="#"><i class="lni lni-instagram"></i></a></li>
+                    <li><a href="#"><i class="lni lni-twitter"></i></a></li>
+                    <li><a href="#"><i class="lni lni-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Single Widget -->
+            </div>
+            <div class="col-lg-8 bal">
+              <!-- Single Widget -->
+              <div class="single-footer">
+                <h3 style="color: #1A1919">О компании</h3>
+                <ul>
+                  <li><a href="#" style="color: #1A1919">Контакты</a></li>
+                  <li><a href="#" style="color: #1A1919">Доставка</a></li>
+                  <li><a href="#" style="color: #1A1919">Вопросы и ответы</a></li>
+                  <li><a href="#" style="color: #1A1919">Стать партнёром</a></li>
+                  <li><a href="#" style="color: #1A1919">Стать курьером</a></li>
+                  <li><a href="#" style="color: #1A1919">Заказ еды в приложении Брянский фермер</a></li>
+                  <li><a href="#" style="color: #1A1919">Пользовательское соглашение</a></li>
+                </ul>
+              </div>
+              <!-- End Single Widget -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Footer Middle -->
+      <!-- Start Footer Bottom -->
+
+      <div class="container">
+        <div class="inner">
+          <div class="row">
+            <div class="col-12">
+              <div class="left">
+                <p>BY GodOfCat,Qvijae,Astagor,_HADES_,Zandegok,Rayman,didjei(от didjei(не пиздите пожалуйста в голову
+                  ничего не приходит))<a href="https://graygrids.com/" rel="nofollow"
+                                         target="_blank">GayClubBlueAndroid</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Footer Middle -->
     </footer>
     <!--/ End Footer Area -->
 
@@ -385,7 +442,7 @@ export default {
 .background {
   margin-top: 10px;
   border-radius: 10px;
-  background: #0d462c;
+  background: #FFFFFF;
 }
 
 .border {
@@ -398,7 +455,23 @@ export default {
   background-repeat: no-repeat;
 }
 
-.text{
-  font-size: 50px;
+.text-color {
+  color: #1A1919;
+}
+
+.frog p {
+  text-align: center;
+}
+
+.frog {
+  max-width: 200px;
+}
+
+.bal {
+  text-align: right;
+}
+
+.margin-top {
+  margin-top: 50px;
 }
 </style>
