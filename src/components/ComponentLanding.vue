@@ -260,7 +260,7 @@
                   </div>
                   <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo"
                   >
-                    <div class="card-body">
+                    <div class="card-body" style="color: #1A1919">
                       Потому что мы командой из 7 человек старались делать этот проект(а еще, ток спизди сайт сука, я ж
                       тебя знаю, ЛЕНИВЫЙ РАЗРАБ JAVASCRIPT, ИДИ РУЧКАМИ ВЕРСТКУ ПИШИ)
                     </div>
@@ -271,14 +271,15 @@
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse"
                               data-target="#collapseThree" aria-controls="collapseThree" style="color: #1A1919">
-                        <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3 text-color"></i>Как
+                        <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3 text-color" style="color: #1A1919">Как
                         сделать
                         чтоб не вздомали(Что-то с двух этапной аундификацией(аудификацией(а да похуй))).
+                      </i>
                       </button>
                     </h5>
                   </div>
                   <div id="collapseThree" class="collapse " aria-labelledby="headingThree">
-                    <div class="card-body">
+                    <div class="card-body"  style="color: #1A1919">
                       Записываете номер телефона, вам ghb[jlbn rjl rjl ds tuj dgbcsdftnt d dscdtntdijtcz jryj b djn b
                       dct
                       rjulf rnj-nj gjgsnftncz djqnb yf frrfeyn ,tp dfituj dtljvf dfv ghbltn edtljvktybt(ну да,ну да
@@ -292,8 +293,8 @@
                     <h5 class="mb-0">
                       <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse"
                               data-target="#collapseFour" aria-controls="collapseFour" style="color: #1A1919">
-                        <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"></i>Как с нами
-                        связатся.
+                        <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"  style="color: #1A1919">Как с нами
+                        связатся.</i>
                       </button>
                     </h5>
                   </div>
@@ -458,14 +459,15 @@ export default {
   color: #1A1919;
 }
 
-.frog p{
+.frog p {
   text-align: center;
 }
-.frog{
+
+.frog {
   max-width: 200px;
 }
 
-.bal{
+.bal {
   text-align: right;
 }
 
