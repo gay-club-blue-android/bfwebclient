@@ -27,7 +27,7 @@
             <h4>Описание: {{ farmer.description }}</h4>
           </div>
           <div>
-            <a href="#" class="color mb-5 btn white-text">Изменить</a>
+            <a href="#" class="color mb-5 btn white-text">Изменить</a><br>
             <router-link class="color mb-5 btn white-text" to="/newproduct">Добавить продукт</router-link>
           </div>
         </div>

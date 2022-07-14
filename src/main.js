@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './config-router'
 import globalVariables from './inner-storage'
 import toaster from '@meforma/vue-toaster';
+import { UploadMedia, UpdateMedia } from 'vue-media-upload';
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
@@ -105,4 +106,6 @@ createApp(App)
     .use(router)
     .use(toaster)
     .component('BootstrapIcon', BootstrapIcon)
+    .component('upload-media' , UploadMedia)
+    .component('update-media' , UpdateMedia)
     .mount('#app')

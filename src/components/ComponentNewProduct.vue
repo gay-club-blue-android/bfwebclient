@@ -30,6 +30,12 @@
                    id="inputDescription" v-model="product.description"/>
             <label for="inputDescription">description</label>
           </div>
+          <div class="p-1 form-floating container">
+            <upload-media
+                server="http://localhost:8040/web/products/loadImage"
+                error="">
+            </upload-media>
+          </div>
         </div>
 
         <div class="col text-center">
