@@ -9,26 +9,26 @@
     </div>
 
     <div class="row huy">
-      <div>
-        <div class="container overflow-hidden">
-          <div class="col ">
-            <div class="p-1 form-floating container">
-              <img id="image">
-            </div>
-            <div class="p-1 form-floating container">
-              <h4>Имя: {{ farmer.firstName }}</h4>
-            </div>
-            <div class="p-1 form-floating container">
-              <h4>Фамилия: {{ farmer.lastName }}</h4>
-            </div>
-            <div class="p-1 form-floating container">
-              <h4>Email: {{ farmer.email }}</h4>
-            </div>
-            <div class="p-1  form-floating container">
-              <h4>Описание: {{ farmer.description }}</h4>
-            </div>
+      <div class="container overflow-hidden">
+        <div class="col ">
+          <div class="p-1 form-floating container">
+            <img id="image">
+          </div>
+          <div class="p-1 form-floating container">
+            <h4>Имя: {{ farmer.firstName }}</h4>
+          </div>
+          <div class="p-1 form-floating container">
+            <h4>Фамилия: {{ farmer.lastName }}</h4>
+          </div>
+          <div class="p-1 form-floating container">
+            <h4>Email: {{ farmer.email }}</h4>
+          </div>
+          <div class="p-1  form-floating container">
+            <h4>Описание: {{ farmer.description }}</h4>
+          </div>
+          <div>
             <a href="#" class="color mb-5 btn white-text">Изменить</a>
-            <router-linl class="color mb-5 btn white-text" to="/newproduct"><btn>Добавить продукт</btn><router-link>
+            <router-link class="color mb-5 btn white-text" to="/newproduct">Добавить продукт</router-link>
           </div>
         </div>
       </div>
@@ -84,9 +84,8 @@
         </div>
       </div>
     </div>
+
   </div>
-
-
 </template>
 
 <script>
@@ -165,7 +164,6 @@ export default {
 <style scoped>
 .huyna-ebanaya {
   background: #FFFFFF url("/public/profile/Background.svg") no-repeat;
-
 }
 
 .color {

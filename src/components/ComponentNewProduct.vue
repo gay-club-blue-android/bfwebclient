@@ -41,7 +41,7 @@
 </template>
 
 <script>
-//import {Form, Field} from 'vee-validate';
+import {Form, Field} from 'vee-validate';
 
 import innerStorage from "/src/inner-storage"
 //import router from "@/config-router";
@@ -49,8 +49,8 @@ import innerStorage from "/src/inner-storage"
 export default {
   name: "ComponentNewProduct",
   components: {
-    //Form,
-    //Field,
+    Form,
+    Field,
   },
   data() {
     return {
@@ -58,7 +58,7 @@ export default {
       product: {
         name: "",
         price: 0,
-        priceMeasurementId:3,
+        priceMeasurementId: 3,
         amount: 0,
         amountMeasurementId: 3,
         description: "",
@@ -79,8 +79,10 @@ export default {
           "DEVICE_ID": innerStorage.getValueByKey(innerStorage.keys.DeviceId)
         },
         body: JSON.stringify(this.product)
-      }).then(response => {
-        console.dir(response);
+      }).then(response => response.json()).then(responseAsObject => {
+        console.dir(responseAsObject);
+        this.$toast.success(`Продукт успешно добавлен`);
+        setTimeout(this.$toast.clear, 3000);
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
       });
@@ -89,12 +91,16 @@ export default {
   mounted() {
     console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
     console.dir(typeof innerStorage.getValueByKey(innerStorage.keys.farmer));
-    this.loadFarmerPicture();
   }
 
 }
 </script>
 
 <style scoped>
-
+.color {
+  background: #0d462c;
+}
+.white-text {
+  color: white !important;
+}
 </style>
