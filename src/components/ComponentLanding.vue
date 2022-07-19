@@ -320,7 +320,7 @@
               <div class="single-footer">
                 <div class="logo align-center">
                   <img src="../../public/landing/images/logo/Logo.svg">
-                  <p style="color: #1A1919">Брянский фермер</p>
+                  <p style="color: #FFFFFF">Брянский фермер</p>
                 </div>
               </div>
               <!-- End Single Widget -->
@@ -330,10 +330,10 @@
               <div class="single-footer">
                 <h3>О нас</h3>
                 <ul>
-                  <li><a href="#" style="color: #1A1919">Контакты</a></li>
-                  <li><a href="#" style="color: #1A1919">О компании</a></li>
-                  <li><a href="#" style="color: #1A1919">Горячая линия</a></li>
-                  <li><a href="#" style="color: #1A1919">Бренд</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Контакты</a></li>
+                  <li><a href="#" style="color: #FFFFFF">О компании</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Горячая линия</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Бренд</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -343,10 +343,10 @@
               <div class="single-footer ">
                 <h3>Поддержка</h3>
                 <ul>
-                  <li><a href="#" style="color: #1A1919">Контакты</a></li>
-                  <li><a href="#" style="color: #1A1919">Оплата</a></li>
-                  <li><a href="#" style="color: #1A1919">Безопасность</a></li>
-                  <li><a href="#" style="color: #1A1919">Доставка</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Контакты</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Оплата</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Безопасность</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Доставка</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -356,9 +356,9 @@
               <div class="single-footer">
                 <h3>Продавцам</h3>
                 <ul>
-                  <li><a href="#" style="color: #1A1919">Личный кабинет</a></li>
-                  <li><a href="#" style="color: #1A1919">Продавайте</a></li>
-                  <li><a href="#" style="color: #1A1919">Документация</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Личный кабинет</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Продавайте</a></li>
+                  <li><a href="#" style="color: #FFFFFF">Документация</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
