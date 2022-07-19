@@ -29,7 +29,8 @@
       <div class="container mt-3">
         <div class="row">
           <div class="col text-center">
-            <button class="btn color white-text" @click="authFarmer">Войти</button>
+            <button class="btn color white-text" @click="authFarmer"
+            :disabled="errors.login==='input-not-valid' ||errors.password==='input-not-valid'">Войти</button>
           </div>
         </div>
       </div>
