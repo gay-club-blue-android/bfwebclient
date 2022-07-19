@@ -11,29 +11,30 @@
         </div>
       </div>
 
-    <div class="filler">
-      <div class="container">
-        <div class="col text-center">
-          <div class="p-1 form-floating container">
-            <Field name="email" rules="input-email-rule" :class="errors.email" class="form-control"
-                   id="inputEmail" v-model="email"/>
-            <label for="inputEmail">Email</label>
-          </div>
-          <div class="p-1 form-floating container mt-3">
-            <Field name="password" rules="input-text-rule:1,64" :class="errors.password" class="form-control"
-                   id="inputPassword" v-model="password"/>
-            <label for="inputPassword">Пароль</label>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-3">
-        <div class="row">
+      <div class="filler">
+        <div class="container">
           <div class="col text-center">
-            <button class="btn color white-text" @click="authFarmer"
-            :disabled="errors.login==='input-not-valid' ||errors.password==='input-not-valid'">Войти</button>
+            <div class="p-1 form-floating container">
+              <Field name="email" rules="input-email-rule" :class="errors.email" class="form-control"
+                     id="inputEmail" v-model="email"/>
+              <label for="inputEmail">Email</label>
+            </div>
+            <div class="p-1 form-floating container mt-3">
+              <Field name="password" rules="input-text-rule:1,64" :class="errors.password" class="form-control"
+                     id="inputPassword" v-model="password"/>
+              <label for="inputPassword">Пароль</label>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col text-center">
+              <button class="btn color white-text" @click="authFarmer"
+                      :disabled="errors.email!=='input-valid' || errors.password!=='input-valid'">Войти
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </Form>
   </main>
@@ -79,7 +80,6 @@ export default {
         })
       }).then(response => response.json()).then(responseAsObject => {
 
-
         innerStorage.setKeyValuePair(innerStorage.keys.ApiKey, responseAsObject.apiKey);
         innerStorage.setKeyValuePair(innerStorage.keys.DeviceId, deviceId);
         innerStorage.setKeyValuePair(innerStorage.keys.isAuthorized, true);
@@ -107,8 +107,19 @@ export default {
           email: this.email,
           password: this.password.trim(),
         })
-      }).then(response => response.json()).then(responseAsObject => {
+      }).then(response => {
 
+        console.dir(response.status);
+
+        if (!response.ok) {
+          let err = new Error("HTTP status code: " + response.status)
+          err.response = response
+          err.status = response.status
+          throw err
+        }
+
+        return response.json();
+      }).then(responseAsObject => {
         innerStorage.setKeyValuePair(innerStorage.keys.farmer, responseAsObject);
 
         console.dir("success auth");
@@ -120,6 +131,11 @@ export default {
 
       }).catch(error => {
         console.log('Looks like there was a problem: \n', error);
+        error.response.json().then(r => {
+          this.$toast.error(`Ошибка авторизации: ` + r.message);
+          setTimeout(this.$toast.clear, 3000);
+          console.dir("error details: " + r.message)
+        });
       });
     }
   }
@@ -131,24 +147,25 @@ export default {
 .filler {
   width: 100%;
   height: 100vh;
-  background: #ffffff url("/public/Auth/images/Background.svg") no-repeat ;
+  background: #ffffff url("/public/Auth/images/Background.svg") no-repeat;
 }
 
 
-.enterLogo{
+.enterLogo {
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-.white-text{
+.white-text {
   color: white !important;
 }
 
-.color{
+.color {
   background: #0d462c;
 }
-.text-size{
+
+.text-size {
   font-size: 50px;
 }
 
