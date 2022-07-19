@@ -151,7 +151,9 @@
                     <div class="tab-content">
                       <ul>
                         <li style="color: #1A1919"><i class="lni lni-checkmark-circle"></i> Ищеш что тебе нужно</li>
-                        <li style="color: #1A1919"><i class="lni lni-checkmark-circle"></i> Хз может что то еще по желанию</li>
+                        <li style="color: #1A1919"><i class="lni lni-checkmark-circle"></i> Хз может что то еще по
+                          желанию
+                        </li>
 
                       </ul>
 
@@ -174,7 +176,7 @@
           </div>
           <div class="col-lg-6 col-12">
             <div class="about-right  fadeInRight" data-wow-delay=".4s">
-              <img src="../../public/landing/images/about/baba.jpg" alt="#">
+              <img src="../../public/landing/images/about/baba.jpg" class="border-radius" alt="#">
             </div>
           </div>
         </div>
@@ -199,13 +201,20 @@
             <div class="intro-video-play">
               <div class="carousel-3d">
                 <figure>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
-                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" alt=""/></a></div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
+                  <div><a href="#any"><img src="../../public/landing/images/hero/her.jpg" class="border-radius" alt=""/></a>
+                  </div>
                 </figure>
                 <nav>
                   <button class="nav">Крути!</button>
@@ -464,6 +473,10 @@ export default {
 
 .text-color {
   color: #1A1919;
+}
+
+.border-radius {
+  border-radius: 20px;
 }
 
 .frog p {
