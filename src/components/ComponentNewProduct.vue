@@ -69,7 +69,7 @@ export default {
         amountMeasurementId: 3,
         description: "",
         rating: 4.5,
-        photoPath: "",
+        photoPath: "banan.jpg",
         farmerId: innerStorage.getValueByKey(innerStorage.keys.farmer).id,
         productCategoryId: 3
       }

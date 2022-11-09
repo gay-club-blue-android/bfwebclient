@@ -41,7 +41,6 @@ router.beforeEach((to, from) => {
     console.log(to);
     console.dir(innerStorage.getValueByKey(innerStorage.keys.farmer));
 
-
     if (to.path.startsWith("/profile") || to.path.startsWith("/newproduct")) {
         if (innerStorage.getValueByKey(innerStorage.keys.farmer) === null) {
            return '/auth';
